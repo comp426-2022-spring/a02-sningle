@@ -1,3 +1,5 @@
+export { coinFlip, coinFlips, countFlips, flipACoin }
+
 /** Coin flip functions 
  * This module will emulate a coin flip given various conditions as parameters as defined below
  */
@@ -14,8 +16,8 @@
  * 
  */
 
-export function coinFlip() {
-	return (Math.random() > 0.5 ? heads | tails);
+function coinFlip() {
+	return (Math.random() > 0.5 ? "heads" : "tails");
 }
 
 /** Multiple coin flips
@@ -38,7 +40,13 @@ export function coinFlip() {
  */
 
 function coinFlips(flips) {
-
+  const flip_array = [];
+  var i = 0;
+  while (i < flips) {
+    flip_array.push(coinFlip())
+    i++;
+  }
+  return flip_array;
 }
 
 /** Count multiple flips
@@ -55,7 +63,21 @@ function coinFlips(flips) {
  */
 
 function countFlips(array) {
-
+  var i = 0;
+  var heads = 0;
+  var tails = 0;
+  while (i < array.length) {
+    if (array[i] == "heads") {
+      heads++;
+    } else {
+      tails++;
+    }
+    i++;
+  }
+  const final_nums = new Map();
+  final_nums.set("tails", tails);
+  final_nums.set("heads", heads)
+  return final_nums;
 }
 
 /** Flip a coin!
@@ -70,7 +92,18 @@ function countFlips(array) {
  */
 
 function flipACoin(call) {
-
+  const flip = coinFlip();
+  var result = "";
+  if (call == flip) {
+    result = "win";
+  } else {
+    result = "lose";
+  }
+  const final_results = new Map();
+  final_results.set("call", call);
+  final_results.set("flip", flip);
+  final_results.set("result", result);
+  return final_results;
 }
 
 
