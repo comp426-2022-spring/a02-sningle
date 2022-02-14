@@ -4,4 +4,5 @@ import minimist from "minimist";
 const args = minimist(process.argv.slice(2))
 args["call"]
 const guess = args.call
-console.log(flipACoin(guess))
+const map = flipACoin(guess);
+console.log("{ call: " + map.get("call") + ", flip: " + map.get("flip") + ", result: " + map.get("result") + " }")
