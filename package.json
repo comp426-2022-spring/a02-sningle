@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/comp426-2022-spring/a02-sningle/issues"
   },
-  "homepage": "https://github.com/comp426-2022-spring/a02-sningle#readme"
+  "homepage": "https://github.com/comp426-2022-spring/a02-sningle#readme",
+  "dependencies": {
+    "minimist": "^1.2.5"
+  }
 }

@@ -92,6 +92,11 @@ function countFlips(array) {
  */
 
 function flipACoin(call) {
+  if (call != "heads" & call != "tails") {
+    console.log("Error: no input.")
+    console.log("Usage: node guess-flip --call=[heads|tails]")
+    process.exit(1);
+  }
   const flip = coinFlip();
   var result = "";
   if (call == flip) {
