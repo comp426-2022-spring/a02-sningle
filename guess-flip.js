@@ -5,4 +5,6 @@ const args = minimist(process.argv.slice(2))
 args["call"]
 const guess = args.call
 const map = flipACoin(guess);
-console.log("{ call: " + map.get("call") + ", flip: " + map.get("flip") + ", result: " + map.get("result") + " }")
+if (guess == "heads" | guess == "tails") {
+    console.log("{ call: " + map.get("call") + ", flip: " + map.get("flip") + ", result: " + map.get("result") + " }")
+}
