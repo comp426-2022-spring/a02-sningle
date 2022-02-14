@@ -3,14 +3,14 @@ import minimist from "minimist";
 
 const args = minimist(process.argv.slice(2))
 args["number"]
-const flips = args.number | -1
+const flips = args.number
 var i = 0
 const flip_array = [];
 while (i < flips) {
     flip_array[i] = coinFlip();
     i++;
 }
-if (flips == -1) {
+if (flips == null) {
     flip_array[i] = coinFlip();
     if (flip_array[i] == "heads") {
         console.log("{ heads: 1 }")
