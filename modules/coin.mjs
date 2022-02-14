@@ -95,20 +95,20 @@ function flipACoin(call) {
   if (call != "heads" & call != "tails" | call == null) {
     console.log("Error: no input.")
     console.log("Usage: node guess-flip --call=[heads|tails]")
-    process.exit(1);
-  }
-  const flip = coinFlip();
-  var result = "";
-  if (call == flip) {
-    result = "win";
   } else {
-    result = "lose";
+    const flip = coinFlip();
+    var result = "";
+    if (call == flip) {
+      result = "win";
+    } else {
+      result = "lose";
+    }
+    const final_results = new Map();
+    final_results.set("call", call);
+    final_results.set("flip", flip);
+    final_results.set("result", result);
+    return final_results;
   }
-  const final_results = new Map();
-  final_results.set("call", call);
-  final_results.set("flip", flip);
-  final_results.set("result", result);
-  return final_results;
 }
 
 

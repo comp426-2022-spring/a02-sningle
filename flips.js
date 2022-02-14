@@ -17,10 +17,10 @@ if (flips == null) {
     } else {
         console.log("{ tails: 1 }")
     }
-    process.exit(1);
+} else {
+    const map = countFlips(flip_array)
+
+    console.log(flip_array);
+    console.log("{ tails: " + map.get("tails") + ", heads: " + map.get("heads") + " }")
 }
 
-const map = countFlips(flip_array)
-
-console.log(flip_array);
-console.log("{ tails: " + map.get("tails") + ", heads: " + map.get("heads") + " }")
