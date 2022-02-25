@@ -13,8 +13,10 @@ while (i < flips) {
 if (flips == null) {
     flip_array[i] = coinFlip();
     if (flip_array[i] == "heads") {
+        console.log(flip_array);
         console.log("{ 'heads': 1 }")
     } else {
+        console.log(flip_array);
         console.log("{ 'tails': 1 }")
     }
 } else {
