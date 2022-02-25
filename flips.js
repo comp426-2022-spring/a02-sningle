@@ -21,6 +21,6 @@ if (flips == null) {
     const map = countFlips(flip_array)
 
     console.log(flip_array);
-    console.log("{ 'tails': " + map.get("tails") + ", 'heads': " + map.get("heads") + " }")
+    console.log("{ 'tails': '" + map.get("tails") + "', 'heads': '" + map.get("heads") + "' }")
 }
 
