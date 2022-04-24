@@ -2,4 +2,3 @@
 import {coinFlip, coinFlips, countFlips, flipACoin} from "./modules/coin.mjs"
 // Call the coinFlip function and put the return into STDOUT
 console.log(coinFlip())
-// console.log(flipACoin("heads"));
