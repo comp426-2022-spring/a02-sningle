@@ -64,20 +64,19 @@ function coinFlips(flips) {
 
 function countFlips(array) {
   var i = 0;
-  var heads = 0;
-  var tails = 0;
+  var total {
+	  heads: 0;
+	  tails: 0
+  }
   while (i < array.length) {
     if (array[i] == "heads") {
-      heads++;
+      total.heads++;
     } else {
-      tails++;
+      total.tails++;
     }
     i++;
   }
-  const final_nums = new Map();
-  final_nums.set("tails", tails);
-  final_nums.set("heads", heads)
-  return final_nums;
+  return total;
 }
 
 /** Flip a coin!
