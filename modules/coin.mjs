@@ -62,11 +62,11 @@ function coinFlips(flips) {
  * @returns {{ heads: number, tails: number }}
  */
 
-function countFlips(array) {
+export function countFlips(array) {
   var i = 0;
-  var total {
-	  heads: 0;
-	  tails: 0
+  var total = {
+    heads: 0,
+    tails: 0
   }
   while (i < array.length) {
     if (array[i] == "heads") {
