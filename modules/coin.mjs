@@ -42,7 +42,10 @@ function coinFlip() {
 function coinFlips(flips) {
   const flip_array = [];
   var i = 0;
-  while (i < flips) {
+  if (flips == null) {
+    var flip = 1;
+  }
+  while (i < flip) {
     flip_array.push(coinFlip())
     i++;
   }
@@ -76,6 +79,13 @@ function countFlips(array) {
     }
     i++;
   }
+
+  if (total.heads == 0) {
+    delete total.heads
+  } else if (total.tails == 0) {
+    delete total.tails
+  }
+
   return total;
 }
 
