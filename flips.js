@@ -7,7 +7,7 @@ const flips = args.number
 var i = 0
 const flip_array = [];
 while (i < flips) {
-    flip_array[i] = coinFlip();
+    flip_array.push(coinFlip());
     i++;
 }
 if (flips == null) {
